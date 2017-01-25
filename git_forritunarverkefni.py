@@ -4,9 +4,9 @@
 
 #Liður 1
 #Bið notanda um að slá inn tölu eitt
-tala1=int(input("Sláðu inn tölu eitt"))
+tala1=int(input("Sláðu inn tölu eitt "))
 #Bið notanda um að slá inn tölu tvö
-tala2=int(input("Sláðu inn tölu tvö"))
+tala2=int(input("Sláðu inn tölu tvö "))
 #Plúsa tölurnar saman
 plus=tala1+tala2
 #Margfalda tölurnar saman
@@ -15,3 +15,11 @@ marg=tala1*tala2
 print("Tölurnar lagðar saman:",plus)
 #Birti tölurnar margfaldaðar saman
 print("Tölurnar margfaldaðar saman:",marg)
+
+#Liður 2
+#Bið notanda um fornafn
+fornafn=input("Sláðu inn fornafn ")
+#Bið notanda um eftirnafn
+eftirnafn=input("Sláðu inn eftirnafn ")
+#Birti nöfnin ásamt "Halló" í byrjun
+print("Halló",fornafn,eftirnafn)
