@@ -23,3 +23,19 @@ fornafn=input("Sláðu inn fornafn ")
 eftirnafn=input("Sláðu inn eftirnafn ")
 #Birti nöfnin ásamt "Halló" í byrjun
 print("Halló",fornafn,eftirnafn)
+
+#Liður 3
+text=input("Sláðu inn texta ")
+telhastafir=0
+tellagstafir=0
+tellagstafireftira=0
+for x in range(len(text)):
+    if(text[x].isalpha() and text[x].isupper()):
+        telhastafir=telhastafir+1
+        if(text[x+1].islower()):
+            tellagstafireftira=tellagstafireftira+1
+    if (text[x].isalpha() and text[x].islower()):
+        tellagstafir=tellagstafir+1
+print("Í þessum texta eru",telhastafir," hástafir,")
+print("                  ",tellagstafir," lágstafir")
+print("Og",tellagstafireftira," koma strax á eftir hástaf.")
