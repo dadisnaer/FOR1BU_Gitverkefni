@@ -25,17 +25,32 @@ eftirnafn=input("Sláðu inn eftirnafn ")
 print("Halló",fornafn,eftirnafn)
 
 #Liður 3
+#Byð notanda um texta
 text=input("Sláðu inn texta ")
-telhastafir=0
-tellagstafir=0
-tellagstafireftira=0
+#Bý til teljara fyrir hástafi
+telhastafi=0
+#Bý til teljara fyrir lágstafi
+tellagstafi=0
+#Bý til teljara fyrir lágstafi sem eru eftir hástafi
+tellagstafieftir=0
+
+#Bý til for lykkju sem keyrir í gegnum textann
 for x in range(len(text)):
-    if(text[x].isalpha() and text[x].isupper()):
-        telhastafir=telhastafir+1
-        if(text[x+1].islower()):
-            tellagstafireftira=tellagstafireftira+1
-    if (text[x].isalpha() and text[x].islower()):
-        tellagstafir=tellagstafir+1
-print("Í þessum texta eru",telhastafir," hástafir,")
-print("                  ",tellagstafir," lágstafir")
-print("Og",tellagstafireftira," koma strax á eftir hástaf.")
+    #Ef stafurinn í texta er bókstafur og er í hástaf
+    if (text[x].isalpha() and text[x].isupper()):
+        #Bæti 1 við teljara fyrir hágstafi
+        telhastafi=telhastafi+1
+        #Ef næsti stafur er lágstafur
+        if (text[x+1].islower()):
+            #Bæti 1 við teljara fyrir lágstafi á eftir hástafi
+            tellagstafieftir=tellagstafieftir+1
+    #Ef stafurinn í texta er bókstafur og er í lágstaf
+    elif(text[x].isalpha() and text[x].islower()):
+        #Bæti 1 við teljara fyrir lágstafi
+        tellagstafi=tellagstafi+1
+#Birti fjölda hástafi
+print("Það komu",telhastafi,"hástafir")
+#Birti fjölda lágstafi
+print("Það komu",tellagstafi,"lágstafir")
+#Birti fjölda lágstafi á eftir hástafi
+print("Það komu",tellagstafieftir,"lágstafir koma strax á eftir hástaf")
